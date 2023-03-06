@@ -37,7 +37,7 @@ try:
     cursor = db.cursor()
     
     #Query to add a new player 
-    add_player = ("INSERT INTO player(first_name, last_name, team_id) VALUES('Team', 'Gandalf', 1)")
+    add_player = ("INSERT INTO player(first_name, last_name, team_id) VALUES('Mina', 'Sedik', 1)")
 
     #Add new player
     cursor.execute(add_player)
@@ -49,7 +49,7 @@ try:
     show(cursor, "DISPLAYING PLAYERS AFTER INSERT")
 
     #New record 
-    update_player = ("UPDATE player SET team_id = 2 WHERE first_name = 'Team'")
+    update_player = ("UPDATE player SET team_id = 2 WHERE first_name = 'Mina'")
 
     #Query update
     cursor.execute(update_player)
@@ -61,8 +61,8 @@ try:
     show(cursor, "DISPLAYING PLAYERS AFTER UPDATE")
 
     #Delete query 
-    delete_player = ("DELETE FROM player WHERE first_name = 'Team'")
-     
+    delete_player = ("DELETE FROM player WHERE first_name = 'Mina'")
+      
     cursor.execute(delete_player)
      
     #Commit to the database
